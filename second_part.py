@@ -15,6 +15,7 @@ def diction_ary():
 
 diction_ary()
 
+
 #Types of river
 def rivers():
   rivers_country = {'nile' : 'egypt', 'amazon' : 'brazil', 'yangtze' : 'china', 'mississippi' : 'USA', 'ganges' : 'india'}
@@ -27,7 +28,29 @@ def rivers():
     print("I'd love to see it\n")
 
   for v in rivers_country.values():
-    print(f"{v.title()} is such a beautiful country")
+    if 'USA' in v:
+      print(f"{v.upper()} is such a beautiful country\n")
+    else:
+      print(f"{v.title()} is such a beautiful country\n")
 
 rivers()
+
+
+def fav_lang_poll():
+  favorite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'rust',
+  'phil': 'python',
+  }
+  names = ['fari', 'sally', 'hali', 'jen', 'edward']
+  for name in names:
+    if name in favorite_languages.keys():
+      print(f"Hello {name}! Thank you for responding\n")
+    else:
+      print(f"Hello {name}! You're invited to take this poll\n")
+
+fav_lang_poll()
+    
+    
 
